@@ -1,0 +1,12 @@
+g++ edgedetect.cpp -o edgedetect -I . -lpng 	# working
+g++ om.cpp -o om -I . -lpng                 	# ?? segmentation fault
+g++ rowcountdee.cpp -o rowcountdee -I . -lpng # ?? segmentation fault
+g++ threshold.cpp -o threshold -I . -lpng 		# working
+g++ lettercount.cpp -o lettercount -I . -lpng # working
+g++ rotation.cpp -o rotation -I . -lpng       # working
+g++ scaling.cpp -o scaling -I . -lpng					# ?? segmentation fault
+g++ wordcount.cpp -o wordcount -I . -lpng     # ?? segmentation fault
+
+#g++ -c /cygdrive/i/peaks.cpp -o peaks.o; rm peaks.a; ar rs peaks.a peaks.o; rm peaks.o
+rm output.txt; g++ om.cpp -o om -lpng peaks.a
+./om
